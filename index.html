@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Game 2048</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <header>
+            <div>
+                <h1>2048</h1>
+                <p>Ghép các ô cùng số để đạt <strong>2048!</strong></p>
+            </div>
+
+            <div class="score-container">
+                <div class="score-box">
+                    <span>ĐIỂM</span>
+                    <strong id="score">0</strong>
+                </div>
+
+                <div class="score-box">
+                    <span>CAO NHẤT</span>
+                    <strong id="best-score">0</strong>
+                </div>
+            </div>
+        </header>
+
+        <div class="button-container">
+            <button id="new-game">🔄 Chơi lại</button>
+        </div>
+
+        <div class="game-board" id="game-board"></div>
+
+        <div class="instructions">
+            <h3>Hướng dẫn chơi</h3>
+            <p>
+                Sử dụng các phím <strong>↑ ↓ ← →</strong>
+                hoặc các phím <strong>W A S D</strong> để di chuyển.
+            </p>
+            <p>
+                Hai ô có cùng giá trị sẽ được gộp lại khi chạm vào nhau.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Thông báo Game Over / Chiến thắng -->
+    <div class="overlay" id="overlay">
+        <div class="message-box">
+            <h2 id="message-title">Game Over!</h2>
+            <p id="message-text"></p>
+
+            <button id="continue-game" class="continue-btn">
+                Tiếp tục
+            </button>
+
+            <button id="restart-game">
+                Chơi lại
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
